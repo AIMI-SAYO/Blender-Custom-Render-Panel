@@ -11,7 +11,6 @@ class CustomRenderPanel(bpy.types.Panel):
     def draw(self, context):
         layout = self.layout
         
-        layout.operator("object.delete")
-        layout.operator("mesh.primitive_cube_add")
+        layout.operator("render.render")
 
 bpy.utils.register_class(CustomRenderPanel)
