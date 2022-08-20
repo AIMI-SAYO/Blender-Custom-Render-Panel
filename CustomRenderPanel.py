@@ -10,7 +10,14 @@ class CustomRenderPanel(bpy.types.Panel):
     
     def draw(self, context):
         layout = self.layout
+        ##########################################
+        self.layout.label(text='Render Settings')
         
         layout.operator("render.render")
+        
+        ##########################################
+        self.layout.label(text='Camera Settings')
+        layout.operator("view3d.camera_to_view")
+        layout.operator("view3d.camera_to_view_selected")
 
 bpy.utils.register_class(CustomRenderPanel)
