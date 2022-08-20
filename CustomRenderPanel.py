@@ -9,7 +9,9 @@ class CustomRenderPanel(bpy.types.Panel):
     bl_category = 'Render Panel'
     
     def draw(self, context):
-        self.layout.label(text='Context Here')
+        layout = self.layout
+        
+        layout.operator("object.delete")
+        layout.operator("mesh.primitive_cube_add")
 
-if __name__ == '__main__':
-    bpy.utils.register_class(CustomRenderPanel)
+bpy.utils.register_class(CustomRenderPanel)
