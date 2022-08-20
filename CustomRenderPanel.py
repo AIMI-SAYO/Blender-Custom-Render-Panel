@@ -1,4 +1,5 @@
 import bpy
+from bpy.types import Panel
 
 class CustomRenderPanel(bpy.types.Panel):
     
@@ -12,24 +13,40 @@ class CustomRenderPanel(bpy.types.Panel):
         layout = self.layout
         
         
-        row = layout.row()
+######################################################################################        
+        
+        
         self.layout.label(text='Render Settings')
-        layout.operator("render.render", text = "Engine Render")
-        layout.operator("render.opengl", text = "Viewport Render")
+        col = layout.column(align=True)
+        row = col.row(align=True)
+        
+        row.operator("render.render", text = "Engine Render")
+        row.operator("render.opengl", text = "Viewport Render")
         layout.operator("")
         
         
-        row = layout.row()
+######################################################################################        
+        
+        
         self.layout.label(text='Camera Settings')
+        col = layout.column(align=True)
+        row = col.row(align=True)
+        
+        row.operator("view3d.camera_to_view", text = "Camera to View")
+        row.operator("view3d.camera_to_view_selected", text = "Camera Fit Selected")
         layout.operator("view3d.view_camera", text = "View Camera")
-        layout.operator("view3d.camera_to_view", text = "Camera to View")
-        layout.operator("view3d.camera_to_view_selected", text = "Camera Fit Selected")
         layout.operator("view3d.walk", text = "Free Camera")
         
         
-        #### TEST ####
-        row = layout.row()
-        self.layout.label(text='!!!! TEST !!!!')
+######################################################################################        
+        
+        
+        self.layout.label(text='TEST')
+        
         layout.operator("")
+     
+        
+######################################################################################        
+
 
 bpy.utils.register_class(CustomRenderPanel)
