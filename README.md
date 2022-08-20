@@ -7,4 +7,5 @@ Custom Panel to make life easier for Beginners and Professional artists
 - List of ready render samples (Customizable)
 - Render Engine Switcher Button
 - Auto save Image after render(Customizable format and location)
-
+- Camera Controls (Snap to objects or render selected only)
+- Navigaiton Controls
