@@ -9,7 +9,7 @@ Custom Panel to make life easier for Beginners and Professional artists
 
 ## Step-by-Step Install Instruction
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](Install_Images/1.png)
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
